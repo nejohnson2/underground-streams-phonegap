@@ -1,0 +1,39 @@
+html{
+    background: #232323;
+}
+
+h1,h2,h3,h4,h5,h6,p,a{
+    color: #FFFFFF;
+    font-family: 'powdahregular', Arial, sans-serif;
+    text-decoration: none;
+}
+h1 {
+    position: relative;
+    font-size: 45px;
+    z-index: 1;
+    overflow: hidden;
+    text-align: center;
+    margin:30px 0 15px;
+}
+
+/* Add white line right */
+h1:before, h1:after {
+    position: absolute;
+    top: 20%;
+    overflow: hidden;
+    width: 48%;
+    height: 20px;
+    content: '\a0';
+    background-color: #FFFFFF;
+}
+h1:before {
+    margin-left: -50%;
+    text-align: right;
+}
+h1:after {
+    margin-left: 2%;
+}
+h2 {
+    font-size: 30px;
+    text-align: center;
+}
