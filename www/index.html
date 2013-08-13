@@ -19,22 +19,29 @@
 -->
 <html>
     <head>
+	    <meta http-equiv="Access-Control-Allow-Origin" content="*">
         <meta charset="utf-8" />
         <meta name="format-detection" content="telephone=no" />
         <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
         <link rel="stylesheet" type="text/css" href="css/index.css" />
         <title>Underground Streams</title>
+        
+        <style>img{ height: 100px; float: left; }	</style>
     </head>
     <body>
         <div class="app">
-            <h1>UndergrounD Streams</h1>
+            <h1>Underground Streams</h1>
             <div id="deviceready" class="blink">
                 <p class="event listening">Connecting to Device</p>
                 <p class="event received">Device is Ready</p>
             </div>
         </div>
+		<div id="images">
+		 
+		</div>
         <script type="text/javascript" src="phonegap.js"></script>
         <script type="text/javascript" src="js/index.js"></script>
+        <script src="http://code.jquery.com/jquery.js"></script>
         <script type="text/javascript">
             app.initialize();
         </script>

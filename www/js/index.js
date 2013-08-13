@@ -20,6 +20,27 @@ var app = {
     // Application Constructor
     initialize: function() {
         this.bindEvents();
+
+        var url = 'http://underground-streams-dev.elasticbeanstalk.com/api/nearbyStations';
+        var flickerAPI = "http://api.flickr.com/services/feeds/photos_public.gne?jsoncallback=?";
+
+	    jQuery(document).ready(function() {
+	        $.getJSON(flickerAPI, {
+		        tags: "pizza",
+		        format: "json"
+	        })
+	        .done(function( data ) {
+			    $.each( data.items, function( i, item ) {
+			      $( "<img/>" ).attr( "src", item.media.m ).appendTo( "#images" );
+			      if ( i === 3 ) {
+			        return false;
+			      }
+			    });
+			});
+		});
+		
+		
+			
     },
     // Bind Event Listeners
     //
